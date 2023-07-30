@@ -1,0 +1,89 @@
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.pendulums {
+	margin-top: 20px;
+}
+
+.btn {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.pendulums-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.arm {
+	position: relative;
+	width: 2px;
+	height: 120px;
+	background-color: #333;
+	transform-origin: top center;
+	transform: rotate(45deg);
+}
+
+.bob {
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	background-color: #8d8d8d;
+	background-image: linear-gradient(#707070, #919191, #707070);
+	position: absolute;
+	bottom: -2px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.pivot {
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	background-color: #333;
+	position: absolute;
+	top: -2px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.ding {
+	display: none;
+}
+
+.stop-btn {
+	display: none;
+}
+
+@keyframes flash {
+	0% {
+		filter: brightness(1.6);
+	}
+
+	100% {
+		filter: brightness(1);
+	}
+}
+
+@keyframes swing {
+	0% {
+		transform: rotate(45deg);
+	}
+
+	100% {
+		transform: rotate(-45deg);
+	}
+}
